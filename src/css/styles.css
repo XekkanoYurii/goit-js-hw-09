@@ -23,3 +23,30 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+.gallery {
+  width: 1440px;
+  height: 696px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 24px 156px;
+  gap: 24px;
+  background-color: #fff;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+.gallery-item {
+  list-style: none;
+  display: flex;
+  width: 1128px;
+  height: 200px;
+  gap: 24px;
+  flex-shrink: 0;
+}
+.gallery-image {
+  width: 360px;
+  height: 200px;
+  flex-shrink: 0;
+}
