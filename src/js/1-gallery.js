@@ -81,7 +81,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
          class="gallery-image"
          src="${preview}"
          alt="${description}"
+         width= "360px"
+         height="200px"
          data-source="${original}"/>
+          
       </a>`).join('')}
   </li>`).join('');
 
