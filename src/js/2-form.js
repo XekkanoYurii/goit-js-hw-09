@@ -1,4 +1,4 @@
-const formData = {
+let formData = {
     email: '',
     message: '',
 }
@@ -12,20 +12,20 @@ form.addEventListener('input', (event) => {
   window.addEventListener('DOMContentLoaded', () => {
     const savedFormData = JSON.parse(localStorage.getItem('feedback-form-state'));
     if (savedFormData) {
-      formData = savedFormData;
-      document.querySelector('form').elements.email.value = savedFormData.email;
-      document.querySelector('form').elements.message.value = savedFormData.message;
+        formData = savedFormData;
+        form.elements.email.value = savedFormData.email;
+        form.elements.message.value = savedFormData.message;
     }
-  });
+});
   
-  document.querySelector('form').addEventListener('submit', (event) => {
+  form.addEventListener('submit', (event) => {
     event.preventDefault();
     if (!formData.email || !formData.message) {
-      alert('Fill please all fields');
+        alert('Fill please all fields');
     } else {
-      console.log(formData);
-      localStorage.removeItem('feedback-form-state');
-      formData = { email: "", message: "" };
-      document.querySelector('form').reset();
+        console.log(formData);
+        localStorage.removeItem('feedback-form-state');
+        formData = { email: "", message: "" };
+        document.querySelector('form').reset();
     }
-  });
+});
